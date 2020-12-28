@@ -52,7 +52,7 @@ class TorchmojiModelArtifact(BentoServiceArtifact):
                 self._load_from_directory(model)
             else:
                 raise InvalidArgument('Expecting a path to the model directory')
-        else if isinstance(model dict):
+        elif isinstance(model, dict):
             self._load_from_dict(model)
 
         if self._model is None:
