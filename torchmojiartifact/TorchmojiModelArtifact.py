@@ -46,7 +46,7 @@ class TorchmojiModelArtifact(BentoServiceArtifact):
             'vocabulary': vocabulary,
         }
 
-    def pack(self, model):
+    def pack(self, model, opts=None, update=False):
         if isinstance(model, str):
             if os.path.isdir(model):
                 self._load_from_directory(model)
